@@ -1,0 +1,128 @@
+<nav class="navbar">
+  <!-- Móvil: izquierda -->
+  <div class="navbar-left mobile-only">
+    <i class="pi pi-bars" style="font-size: 1.5rem; cursor:pointer" (click)="menuVisible = true"></i>
+    <i class="pi pi-search" style="font-size: 1.5rem"></i>
+  </div>
+
+  <!-- Logo: siempre visible -->
+  <div class="navbar-center-logo">
+    <img src="images/cometa.svg" alt="Logo" class="icono-blanco">
+  </div>
+
+  <!-- Móvil: derecha -->
+  <div class="navbar-right-mobile mobile-only">
+    <i class="pi pi-shopping-cart" style="font-size: 1.5rem"></i>
+    <i class="pi pi-user" style="font-size: 1.5rem"></i>
+  </div>
+
+  <!-- Web -->
+  <div class="navbar-center web-only">
+
+    <div class="dropdown">
+      <a href="#">Hombre</a>
+      <div class="mega-menu">
+        <div class="mega-menu-content">
+          <div class="mega-menu-column">
+            <h5>Destacado</h5>
+            <ul>
+              <li><a href="#">Todo Para Hombre</a></li>
+              <li><a href="#">Lo Más Vendido</a></li>
+              <li><a href="#">Lo Nuevo</a></li>
+              <li><a href="#">Rebajas</a></li>
+            </ul>
+          </div>
+          <div class="mega-menu-column">
+            <h5>Casuales</h5>
+            <ul>
+              <li><a href="#">Adidas</a></li>
+              <li><a href="#">Nike</a></li>
+              <li><a href="#">New Balance</a></li>
+              <li><a href="#">Puma</a></li>
+            </ul>
+          </div>
+          <div class="mega-menu-column">
+            <h5>Zapatos</h5>
+            <ul>
+              <li><a href="#">Gucci</a></li>
+              <li><a href="#">Versace</a></li>
+              <li><a href="#">Valentino Garavani</a></li>
+              <li><a href="#">Otros</a></li>
+            </ul>
+          </div>
+          <div class="mega-menu-column">
+            <h5>Deportivos</h5>
+            <ul>
+              <li><a href="#">Adidas</a></li>
+              <li><a href="#">Nike</a></li>
+              <li><a href="#">New Balance</a></li>
+              <li><a href="#">Puma</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#">Mujer</a>
+    <a href="#">Pequeños</a>
+    <a href="#">Rebajas</a>
+  </div>
+
+
+  <div class="navbar-right-web web-only">
+    <i class="pi pi-search"></i>
+    <i class="pi pi-shopping-cart"></i>
+    <i class="pi pi-heart"></i>
+    <i class="pi pi-user"></i>
+    <span class="login-text">Iniciar sesión</span>
+  </div>
+</nav>
+
+<p-sidebar [(visible)]="menuVisible" position="left" [baseZIndex]="10000">
+  <div class="custom-sidebar-content">
+
+    <ul class="main-nav">
+      <li><a href="#">Destacados</a></li>
+      <li><a href="#">Hombre</a></li>
+      <li><a href="#">Mujer</a></li>
+      <li><a href="#">Pequeños</a></li>
+      <li><a href="#">Rebajas</a></li>
+      <li>
+        <a href="#">
+          <span>Tipo</span>
+          <i class="pi pi-angle-right"></i>
+        </a>
+      </li>
+    </ul>
+
+    <hr class="sidebar-separator">
+
+    <ul class="utility-nav">
+      <li>
+        <a href="#">
+          <i class="pi pi-info-circle"></i>
+          <span>Ayuda</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="pi pi-shopping-bag"></i>
+          <span>Mis Compras</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="pi pi-cog"></i>
+          <span>Ajustes</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="pi pi-sign-out"></i>
+          <span>Cerrar Sesión</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</p-sidebar>
+
