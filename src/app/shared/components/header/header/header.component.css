@@ -200,10 +200,6 @@
 
 /* --- ESTILOS PARA EL MEGA MENÚ --- */
 
-/* Asegúrate de que la barra de navegación sea el ancla de posicionamiento */
-.navbar {
-  position: relative;
-}
 
 /* Contenedor del mega menú (el panel grande) */
 .mega-menu {
