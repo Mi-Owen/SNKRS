@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from '../../shared/components/header/header/header.component';
 import { PromoComponent } from '../../shared/components/promo/promo.component';
 import { CategoriasComponent } from '../../shared/components/categorias/categorias.component';
+import { RouterLink } from '@angular/router';
 
 // Import de PrimeNG
 import { ButtonModule } from 'primeng/button';
@@ -15,7 +16,8 @@ import { ButtonModule } from 'primeng/button';
     HeaderComponent,
     PromoComponent,
     CategoriasComponent,
-    ButtonModule  // <-- aquí agregas PrimeNG Button
+    ButtonModule,
+    RouterLink  // <-- aquí agregas PrimeNG Button
   ]
 })
 export class IndexComponent {}

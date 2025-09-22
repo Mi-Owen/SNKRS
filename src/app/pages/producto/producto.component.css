@@ -1,0 +1,161 @@
+/* Contenedor principal con dos columnas */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Columnas */
+.image-gallery, .product-info {
+  flex: 1;
+  min-width: 320px;
+}
+
+/* Galería de imágenes */
+.main-image-container {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.main-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+/* Wrapper para thumbnails (desktop debajo de la principal) */
+.thumbnail-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.thumbnail {
+  flex: 1;
+  cursor: pointer;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+  width: 80px;
+}
+.thumbnail:hover {
+  border-color: #adb5bd;
+}
+.thumbnail.selected {
+  border-color: #000;
+}
+.thumbnail img {
+  width: 100%;
+  display: block;
+}
+
+/* Media Query móvil: thumbnails a la derecha de la imagen principal */
+@media (max-width: 768px) {
+  .image-gallery {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row; /* Imagen y thumbnails al mismo nivel */
+  }
+
+  .main-image-container {
+    flex: 3; /* Ocupa más espacio */
+    margin-bottom: 0; /* Quitamos margin inferior */
+  }
+
+  .thumbnail-container {
+    flex: 1; /* Ocupa menos espacio al lado derecho */
+    flex-direction: column; /* Miniaturas en columna */
+    overflow-y: auto;
+    max-height: 300px; /* Altura máxima de scroll vertical */
+    gap: 0.5rem;
+  }
+
+  .thumbnail {
+    width: 100%; /* Llenan el ancho del contenedor vertical */
+    flex: 0 0 auto;
+  }
+}
+
+.size-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  gap: 0.5rem;                           /* espacio entre botones */
+  margin-bottom: 2rem;
+}
+
+.size-grid button {
+  width: 100%;           /* ocupa todo el ancho de la columna */
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: #000;
+  box-sizing: border-box; /* importante para que padding no rompa el ancho */
+}
+
+/* Botón seleccionado */
+.size-grid button.selected-size {
+  background-color: #e0e0e0; /* gris claro */
+  color: #000;
+  border-color: #e0e0e0;
+}
+
+/* Botón no seleccionado (outlined gris) */
+.size-grid button.p-button-outlined {
+  border-color: #ccc;  
+  color: #000;
+}
+
+
+/* Botón principal (Agregar al carrito) */
+.action-buttons button.p-button-primary {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+/* Botón secundario (Favoritos) outlined gris claro) */
+.action-buttons button.p-button-secondary.p-button-outlined {
+  border-color: #ccc;  /* gris claro */
+  color: #000;         /* texto negro */
+  background-color: transparent;
+}
+
+/* Hover para ambos */
+.action-buttons button.p-button-primary:hover {
+  background-color: #333; /* negro más oscuro al pasar el mouse */
+  border-color: #333;
+}
+
+.action-buttons button.p-button-secondary.p-button-outlined:hover {
+  border-color: #999;      /* gris más oscuro al hover */
+  color: #333;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+}
+
+.size-header {
+  display: flex;              /* activa flexbox */
+  justify-content: space-between; /* separa el span y el enlace a extremos */
+  align-items: center;        /* centra verticalmente */
+  padding: 1rem;              /* espacio interno del contenedor */
+  gap: 1rem;                  /* espacio opcional entre elementos */
+}
+
+
+.size-header a {
+  text-decoration: none;
+  color: #495057;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;        /* alinea el icono con el texto */
+  gap: 0.25rem;               /* espacio entre icono y texto */
+}

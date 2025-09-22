@@ -73,13 +73,13 @@
 
   .navbar-left {
     justify-content: flex-start;
-    padding: 4cap ; 
+    padding: 2cqh ; 
     gap: 3rem;/* izquierda */
   }
 
   .navbar-right-mobile {
     justify-content: flex-end;
-    padding: 4cap ; 
+    padding: 2cap ; 
     gap: 3rem; /* derecha */
   }
 

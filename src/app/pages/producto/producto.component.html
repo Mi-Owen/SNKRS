@@ -1,0 +1,49 @@
+<app-header></app-header>
+<app-promo></app-promo>
+
+<div class="product-container">
+
+    <div class="image-gallery">
+        <div class="main-image-container">
+            <img [src]="selectedImage" alt="Air Jordan 1" class="main-image">
+        </div>
+
+        <div class="thumbnail-container">
+            <div *ngFor="let image of productImages" class="thumbnail" (click)="changeImage(image)"
+                [class.selected]="image === selectedImage">
+                <img [src]="image" alt="Vista del producto">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="product-info">
+        <h1>Air Jordan 1</h1>
+
+        <div class="size-selector">
+            <div class="size-header" style="padding: 1rem;">
+                <span style=" padding: 20px; ">Selecciona tu talla</span>
+                <a>
+                    <i class="pi pi-table"></i> Guía de tallas
+                </a>
+            </div>
+
+            <div class="size-grid">
+                <button *ngFor="let size of sizes" pButton type="button" [label]="size.label"
+                    [outlined]="selectedSize !== size.label" [ngClass]="{'selected-size': selectedSize === size.label}"
+                    (click)="selectSize(size.label)">
+                </button>
+
+            </div>
+        </div>
+
+        <div class="action-buttons" style="margin-top: 2cap; margin-bottom: 4cap;">
+            <button pButton type="button" label="Agregar a la bolsa de compra" icon="pi pi-shopping-bag"
+                class="p-button-primary" style="background-color: black;"></button>
+            <button pButton type="button" label="Favoritos" icon="pi pi-heart" class="p-button-secondary"
+                [outlined]="true"></button>
+        </div>
+    </div>
+
+</div>
+
